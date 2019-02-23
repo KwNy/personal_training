@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Clear</title>
+		<style type="text/css">
+			body {
+				width: 750px;
+				font-family: Arial, Verdana, sans-serif;
+				color: #665544;}
+
+		</style>
+	</head>
+	<body>
+		<h1>The Evolution of the Bicycle</h1>
+		<p>In 1817 Baron von Drais invented a walking machine that would help him get around the royal gardens faster.</p>
+		<p>The device know as the Draisienne (or "hobby horse") was made of wood, and propelled by pushing your feed on the ground in a gliding movement.</p>
+		<p>It was not seen a suitable for any place other than a well maintained pathway. </p>
+		<p class="clear">In 1865, the velocipede (meaning "fast foot") attached pedals to the front wheel, but its wooden structure made it extremely uncomfortable.</p>
+		<p>In 1870 the first all-metal machine appeared. The pedals were attached directly to the front wheel. 
+        <p>Solid rubber tires and the long spokes of the large front wheel provided a much smoother ride than its predecessor.</p>
+        
+
+        <!-- <form action="" id="theForm">
+                <fieldset>
+                    <legend>
+                        Products
+                    </legend>
+                    <label>
+                        <input name="product" value="12.95" type="checkbox" id="p1" onclick="totalIt()"/>
+                        Candy $12.95
+                    </label>
+                    <label>
+                        <input name="product" value="5.99" type="checkbox" id="p2" onclick="totalIt()"/>
+                        Burger $5.99
+                    </label>
+                    <label>
+                        <input name="product" value="1.99" type="checkbox" id="p3" onclick="totalIt()"/>
+                        Coke $1.99
+                    </label>
+                    <label>
+                        Total 
+                        <input value="$0.00" readonly="readonly" type="text" id="total"/>
+                    </label>
+                </fieldset>
+                <input value="Submit" type="submit"/>
+                <input value="Reset" type="reset"/>
+            </form> -->
+
+
+
+            <form action="" id="myOrder">
+                    <fieldset>
+                        <legend>
+                            Pizza choice:
+                        </legend>
+                        <label>
+                            <input name="pizza" value="sos pomidorowy" type="checkbox" id="p1" onclick="totalIt()"/>
+                            Margerita
+                        </label>
+                        <label>
+                            <input name="pizza" value="10" type="checkbox" id="p2" onclick="totalIt()"/>
+                            Capriciosa
+                        </label>
+                        <label>
+                            <input name="pizza" value="14" type="checkbox" id="p3" onclick="totalIt()"/>
+                            Primavera
+                        </label>
+                        <label>
+                            Includesl 
+                            <input value="$0.00" readonly="readonly" type="text" id="total"/>
+                        </label>
+                    </fieldset>
+                    <input value="Submit" type="submit"/>
+                    <input value="Reset" type="reset"/>
+                </form>
+    
+                <form>
+                        <select name="cars" id="dropdown">
+                                <option id="car"value="volvo"onclick="chooseCar()">Volvo</option>
+                                <option id="car"value="saab"onclick="chooseCar()">Saab</option>
+                                <option id="car"value="fiat"onclick="chooseCar()">Fiat</option>
+                                <option id="car"value="audi"onclick="chooseCar()">Audi</option>
+                                <option id="car"value="audi"onclick="chooseCar()">Other</option>
+                              </select>
+                              <br><br>
+                              <label>
+                                    Includesl 
+                                    <input value="car" readonly="readonly" type="text" id="allcars"/>
+                                </label>
+                </form>
+
+                <select id="example-select">
+                    
+                </select>
+
+    <script>
+
+var myobject = {
+    ValueA : 'Text A',
+    ValueB : 'Text B',
+    ValueC : 'Text C'
+};
+
+var select = document.getElementById("example-select");
+for(index in myobject) {
+    select.options[select.options.length] = new Option(myobject[index], index);
+}
+
+var select = document.getElementById("example-select");
+if(select.options.length > 0) {
+    document.getElementById("allcars").text="Text: " + select.options[select.selectedIndex].text + "\nValue: " + select.options[select.selectedIndex].value;
+}
+else {
+    window.alert("Select box is empty");
+}
+ 
+
+        function totalIt() {
+  var input = document.getElementsByName("size");
+  var total = 0;
+  for (var i = 0; i < input.length; i++) {
+    if (input[i].checked) {
+      total += parseFloat(input[i].value);
+    }
+  }
+  document.getElementById("total").value = "$" + total.toFixed(2);
+}
+    </script>
+	</body>
+</html>

@@ -1,3 +1,6 @@
-# pizza_portal
+1. Examples - test-sites: 
 
-product page
+ - freecodecamp challanges 
+ - tennis forum 
+ - responsive site
+ 

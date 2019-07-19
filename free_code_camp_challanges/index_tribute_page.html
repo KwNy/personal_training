@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pl" lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <title>Wojciech Fangor tribute page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 0.75rem;
+  font-family: "Lucida Sans", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  background-color: white;
+}
+
+#main {
+  background-color: white;
+  position: relative;
+  max-width: 95%; 
+  margin: auto;
+  background-color: white;
+  overflow: hidden;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+  padding:5px 5px;
+}
+h2 {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding:5px 5px;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  position: relative;
+}
+
+/* Caption text */
+.text {
+  color: black;
+}
+
+.numbertext {
+  position: absolute;
+  color:white;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+img {
+  max-height: 200px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+h1 span:hover,
+h2:hover {
+  color: #dc006c;
+}
+
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  color: black;
+  font-family: "Lucida Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  text-indent: 30px;
+  margin: 0;
+}
+
+.title{
+  color: white;
+}
+
+.title:hover {
+  color: #dc006c;;
+}
+
+.startingparagraph::first-letter {
+  font-size: 200%;
+  color: #282828;
+}
+
+.logo .word1 {
+  color: #dc006c;
+  margin-right: -38px;
+  transform: rotateY(180deg); /* using Prefix free */
+  display: inline-block; /* required for transform */
+  z-index: 10; /* stack 1st word on top */
+}
+.logo .word1:before {
+  right: -4px; /* would be left, but we flipped the word */
+  top: -9px;
+  border-top-color: #282828; /* match background color */
+  border-right-color: #282828; /* would be left, but we flipped the word */
+}
+.logo .word1:after {
+  left: 17px; /* would be right, but we flipped the word */
+  bottom: -15px;
+  border-bottom-color: #282828;
+  border-left-color: #282828; /* would be right, but we flipped the word */
+}
+
+#tribute-link {
+  color: black;
+  font-weight:bold;
+}
+#tribute-link:hover {
+  color: #dc006c;
+}
+
+#title {
+  padding: 10px;
+}
+
+#img-div {
+  background-color: #dc006c;
+  display: flex;
+  justify-content: center;
+}
+
+#image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#img-caption {
+  color: black;
+    font-weight: bold;
+}
+
+#tribute-info {
+  padding-bottom: 20px;
+  text-align: justify;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+footer a:hover {
+  color:#dc006c;
+  background-color: white;
+  text-decoration: none;
+}
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  font-weight: bold;
+  text-align: center;
+  height: auto;
+  width: 100%;
+   color: white;
+}
+footer a {color:white;}
+</style>
+</head>
+<body>
+  <div id="main">
+      <h1 id="title" class="logo">
+        <span class="word1">Wojciech</span>
+        <span class="word2">&nbsp;</span>
+        <span class="word2">&nbsp;</span>
+        <span><a  class="title" href="https://culture.pl/en/node/5473407" target="_blank">Fangor 
+        |painter |graphic artist |sculptor </a></span>
+      </h1>
+      <p class="startingparagraph"><span class="name">Wojciech Fangor </span> was an author of architectural projects and urban space projects, set designer. Born on 15th November 1922 in Warsaw. Died on 25th October 2015. He was a Polish painter, graphic artist, sculptor and a co-creator
+        of the Polish School of Posters.
+        <div id="img-div" class="slideshow-container">
+          <!-- <a class="prev" onclick="plusSlides(1)">&#10151;</a> -->
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img id="image" style="width:100%" alt="Wojciech Fangor-fot.Marcin Kucewicz" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Wojciech_Fangor-fot.Marcin_Kucewicz.jpg/512px-Wojciech_Fangor-fot.Marcin_Kucewicz.jpg">
+            <div id="img-caption" class="text">'A Study of Space'</div>
+          </div>
+    
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Wojciech_Fangor_-_podpis_%282014%29.svg/512px-Wojciech_Fangor_-_podpis_%282014%29.svg.png" style="width:100%" alt="">
+            <div class="text">Artist's Signature</div>
+          </div>
+    
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/C14_Stadion_Narodowy_-_%C5%9Bciana_zatorowa%2C_Dzie%C5%84_Otwarty_Metra%2C_2014-11-09.jpg/512px-C14_Stadion_Narodowy_-_%C5%9Bciana_zatorowa%2C_Dzie%C5%84_Otwarty_Metra%2C_2014-11-09.jpg"
+              alt="Stadion Narodowy" style="width:100%">
+            <div class="text">Subway Station by Fangor</div>
+          </div>
+        </div>
+        <!--   <a class="next" onclick="plusSlides(1)">&#10151;</a> -->
+        <br>
+    
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    
+        <h2><a class="title" href="https://culture.pl/en/node/5473407" target="_blank"> colour, shape and space – cubism, op-art and classicism</a></h2>
+        
+        <div id="tribute-info">
+          <p class="startingparagraph"><span class="name">Wojciech Fangor </span> was an author of architectural projects and urban space projects, set designer. Born on 15th November 1922 in Warsaw. Died on 25th October 2015. He was a Polish painter, graphic artist, sculptor and a co-creator
+            of the Polish School of Posters. After privately studying art with Felicjan Kowarski and Tadeusz Pruszkowski, he obtained his diploma in 1946 at the Academy of Fine Arts in Warsaw.</p>
+    
+          <p>He started in the Socialist realism manner, creating the “Korean Mother” (now in the National Museum, Warsaw collection). Between 1953 and 1961, he was employed as assistant professor at the Academy of Fine Arts in Warsaw. After the Polish October,
+            the so-called "Gomułka's thaw" following Joseph Stalin's death, he turned away from socialist realism as a style. He became one of founders of the Polish School of Posters. In 1961, he left Poland and settled in West Berlin between 1964–1965,
+            in England between 1965–1966, then from 1966 in the United States, where he lectured on art at art schools. He returned to Poland in 1999. In 1970 he had, as the sole Polish artist, an individual exhibition at the Solomon R. Guggenheim Museum
+            in New York City.</p>
+    
+          <p>At the time of his death he resided in Błędów, Grójec County, a village near Warsaw. Fangor designed murals for the station walls of the second line of the Warsaw Underground in 2014.</p>
+        </div>
+
+        <a id="tribute-link" href="https://culture.pl/en/node/5473407" target="_blank">To learn more visit Culture.pl </a>
+      <footer><a href="https://learn.freecodecamp.org">freecodecamproject 2018</a></footer>
+
+    </div>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+   
+</body>
+</html> 

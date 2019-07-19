@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <title>Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+html{ overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;}
+
+body {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  font-family: "Lucida Sans", Arial, sans-serif;
+  font-size: 1.0625rem;
+  /* line-height: 1.5rem; */
+  background-color:#BEE1FF
+  
+}
+input[type=text],input[type=number],input[type=email], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+input[type=text]:focus,input[type=number]:focus,input[type=email]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+input:invalid {
+    background: #ffdddd;
+         }
+input:valid{
+      background:#ddffdd;
+      }
+#title{font-weight:bold}
+
+#description{font-weight:bold}
+
+#survey-form{color:black}
+
+#name{color:blue;}
+
+#main-content{
+  background-color:white;
+  display:block;
+  align:center;
+  text-align: left;
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;}
+
+
+checkboxes label {
+  display: block;
+  float: left;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+.checkboxes input {
+  vertical-align: middle;
+}
+.checkboxes label span {
+  vertical-align: middle;
+}
+
+
+
+input[type="submit"]{
+    /* properties*/
+    background-color: #555;
+    color: black;
+    font-weight:bold;
+    border-radius: 10px;
+    line-height: normal;
+    padding: 0 6px;
+    text-align: center;
+    background-color: silver;
+    border: none;
+     padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+     margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+#submit
+            {
+              background-color: black; color:#fff;
+
+            }
+	#submit:hover
+	{
+	  background-color: #00B233;
+      color:black;
+	}  
+
+footer a:hover {
+  color:black;
+  background-color: white;
+  text-decoration: none;
+}
+
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  height: auto;
+  width: 100%;
+   color: black;
+}
+a {
+  text-decoration: none;
+}
+footer a {color:black;}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+  <div id="main-content">
+  <h1 id="title">Lifestyle survey</h1>
+  <p id="description">Lifestyle survey and development of questions that focus on a respondents activities, interests and opinions.</p>
+  <form id="survey-form">
+          <label id="name-label"  for="name">First name:</label>
+          <input id="name"type="text" name="firstname" required="required"placeholder=" name"/>
+          <br/>
+          <label id="email-label"for="email">E-mail: </label>
+          <input id="email" type="email" name="email" required="required"placeholder="email"/>
+          <br/>
+          <label id="number-label"for="number">Age:</label><input id="number" type="number"  name="age" min="0" max="100" required="required"placeholder="number"/>
+          <br/>
+          <br/>
+          <p>You are:</p>
+          <div class="checkboxes">
+              <label for="x"><input type="radio" name="gender" value="male" /> <span>Male</span></label>
+              <label for="y"><input type="radio" name="gender" value="female" /> <span>Female</span></label>
+              <label for="z"><input type="radio" name="gender" value="other"/> <span>Other</span></label>
+          </div>
+          <br/>
+          <p>Your favourite car brand is:</p>
+          <select name="cars" id="dropdown">
+                  <option value="volvo">Volvo</option>
+                  <option value="saab">Saab</option>
+                  <option value="fiat">Fiat</option>
+                  <option value="audi">Audi</option>
+                  <option value="audi">Other</option>
+                </select>
+                <br><br>
+          
+          <p>The best car for needs is:</p>
+
+          <input type = "checkbox" name="BrandID[]" value="1">SUV</input>
+          <input type = "checkbox" name="BrandID[]" value="2">Sedan</input>
+          <input type="checkbox" name="BrandId[]" value="3">Jeep</input>
+
+          <br/><br/>
+          <p>Any Comments or Suggestions?</p>
+      
+          <textarea name="comment" form="usrform" rows="4" cols="50">Enter text here...</textarea><br/><br/>
+
+          <input type="submit"id="submit"value="Submit"/>
+
+  </form>
+</div>
+
+</br>
+<footer><a href="https://learn.freecodecamp.org">freecodecamproject 2018</a></footer>
+
+</body>
+</html> 
+
